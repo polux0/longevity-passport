@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card"
 interface CommunityCardProps {
   title: string;
   description: string;
-  image: string; // Add the image property
+  image: string;
 }
 
 // export function CommunityCard({ title, description, memberCount, tags }: CommunityCardProps) {
