@@ -32,32 +32,32 @@ const features = [
     image: "/images/higlight_contributors.svg", // Unique image for this feature
   },
 ];
-const communities = [
-  {
-    title: "Cellular Regeneration",
-    description: "Explore the latest research in cellular repair and regeneration technologies.",
-    memberCount: 1240,
-    tags: ["Research", "Biotech", "Medicine"],
-  },
-  {
-    title: "Nutrition & Longevity",
-    description: "Discussion of dietary approaches to extending healthspan and lifespan.",
-    memberCount: 2350,
-    tags: ["Diet", "Health", "Supplements"],
-  },
-  {
-    title: "Aging Research",
-    description: "Latest developments in understanding and intervening in the aging process.",
-    memberCount: 1890,
-    tags: ["Science", "Research", "Biology"],
-  },
-  {
-    title: "Mental Wellness",
-    description: "Strategies for maintaining cognitive health and mental vitality as we age.",
-    memberCount: 1560,
-    tags: ["Psychology", "Neuroscience", "Wellness"],
-  },
-]
+// const communities = [
+//   {
+//     title: "Cellular Regeneration",
+//     description: "Explore the latest research in cellular repair and regeneration technologies.",
+//     memberCount: 1240,
+//     tags: ["Research", "Biotech", "Medicine"],
+//   },
+//   {
+//     title: "Nutrition & Longevity",
+//     description: "Discussion of dietary approaches to extending healthspan and lifespan.",
+//     memberCount: 2350,
+//     tags: ["Diet", "Health", "Supplements"],
+//   },
+//   {
+//     title: "Aging Research",
+//     description: "Latest developments in understanding and intervening in the aging process.",
+//     memberCount: 1890,
+//     tags: ["Science", "Research", "Biology"],
+//   },
+//   {
+//     title: "Mental Wellness",
+//     description: "Strategies for maintaining cognitive health and mental vitality as we age.",
+//     memberCount: 1560,
+//     tags: ["Psychology", "Neuroscience", "Wellness"],
+//   },
+// ]
 
 const passportReasons = [
   {
@@ -150,7 +150,7 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-white-50 text-center">
                 <CardContent className="pt-6">
-                  <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                   <p className="text-teal-800 font-semibold">{testimonial.author}</p>
                   <p className="text-gray-600">{testimonial.title}</p>
                 </CardContent>
