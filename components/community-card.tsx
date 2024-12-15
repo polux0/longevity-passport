@@ -1,7 +1,4 @@
-import { Badge } from "@/components/ui/badge"
-import { Card, CardHeader, CardContent } from "@/components/ui/card"
-import { Button } from "./ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { Card } from "@/components/ui/card"
 
 interface CommunityCardProps {
   title: string;
