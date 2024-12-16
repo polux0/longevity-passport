@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { CommunityCard } from "@/components/community-card"
 import { FeatureCard } from "@/components/feature-card"
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 import Footer from "@/components/footer"
+
+import { useState } from "react"
+import { EmailPopup } from "@/components/email-popup"
 
 
 const features = [
@@ -22,13 +27,13 @@ const features = [
   {
     title: "Access to Collaboration Opportunities",
     description:
-      "Engage with experts, innovators, and collaborators across the longevity ecosystem. Build partnerships, join groundbreaking initiatives, and contribute to advancements in healthspan and life extension.",
+      "Connect with a diverse network of professionals to participate in pioneering projects and drive progress in healthspan and life extension.",
     image: "/images/collaboration_opportunities.svg", // Unique image for this feature
   },
   {
     title: "Highlighting Top Contributors and Communities",
     description:
-      "Celebrate excellence by featuring top contributors and leading communities. Inspire innovation and foster collaboration by showcasing impactful work and driving recognition for outstanding achievements.",
+      "Recognize and celebrate leading contributors and communities, inspiring innovation and fostering collaboration through the showcase of impactful work.",
     image: "/images/higlight_contributors.svg", // Unique image for this feature
   },
 ];
@@ -62,7 +67,7 @@ const features = [
 const passportReasons = [
   {
     title: "Unite",
-    description: "Bring together global experts, enthusiasts, and innovators to drive collaboration in the longevity ecosystem.",
+    description: "Bring together global experts, enthusiasts, and innovators to drive collaboration in the longevity ecosystem. ",
     type: "unite" as const,
   },
   {
@@ -91,6 +96,8 @@ const testimonials = [
 ]
 
 export default function Home() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+
   return (
     <main className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-6">
@@ -105,13 +112,21 @@ export default function Home() {
           Connect to the longevity ecosystem
         </h2>
         <p className="text-gray-600 text-xl max-w-3xl mx-auto mb-12">
-          Create your Longevity Passport to join a global network of experts, enthusiasts, and innovators. Track your contributions, collaborate with your community, and shape the future of improving healthspan and life extension.
+        Connect to the longevity ecosystem
+        description: Foster connections among 10,000+ global experts, enthusiasts, and innovators. Track your contributions, collaborate within a thriving community, and shape the future of healthspan and life extension.
         </p>
-        <Button 
-          className="bg-[#0A5C5C] hover:bg-[#094949] text-white px-8 py-6 text-lg h-auto"
-        >
-          Reserve your passport <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <div>
+      {/* Button to Open Popup */}
+      <Button
+        className="bg-[#0A5C5C] hover:bg-[#094949] text-white px-8 py-6 text-lg h-auto"
+        onClick={() => setIsPopupOpen(true)} // Open the popup
+      >
+        Get Started with Your Longevity Passport <ArrowRight className="ml-2 h-5 w-5" />
+      </Button>
+
+      {/* Email Popup */}
+      <EmailPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+    </div>
       </section>
 
         {/* Why the longevity passport? Section */}
