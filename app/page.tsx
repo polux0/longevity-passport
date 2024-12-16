@@ -121,7 +121,7 @@ export default function Home() {
         className="bg-[#0A5C5C] hover:bg-[#094949] text-white px-8 py-6 text-lg h-auto"
         onClick={() => setIsPopupOpen(true)} // Open the popup
       >
-        Get Started with Your Longevity Passport <ArrowRight className="ml-2 h-5 w-5" />
+        Reserve Your Longevity Passport <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
 
       {/* Email Popup */}

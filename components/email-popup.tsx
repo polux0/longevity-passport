@@ -39,7 +39,7 @@ export function EmailPopup({ isOpen, onClose }: EmailPopupProps) {
       // Automatically close the "Thank You" popup after 3 seconds
       setTimeout(() => {
         setIsThankYouOpen(false);
-      }, 5000);
+      }, 6000);
     } catch (error) {
       console.error("Failed to send email:", error);
       alert("Failed to send email. Please try again later.");
@@ -94,16 +94,16 @@ export function EmailPopup({ isOpen, onClose }: EmailPopupProps) {
 
       {/* Message */}
       <p className="text-teal-700 text-lg">
-        Your Longevity Passport journey has been kickstarted. We'll keep you updated on our launch!
+        Your Longevity Passport journey has been kickstarted. We&apos;ll keep you updated on our launch!
       </p>
 
       {/* Button or Link */}
-      <Button
+      {/* <Button
         onClick={() => setIsThankYouOpen(false)}
         className="mt-4 bg-teal-800 text-white px-6 py-3 rounded-md hover:bg-teal-700"
       >
         Close
-      </Button>
+      </Button> */}
     </div>
   </DialogContent>
 </Dialog>
